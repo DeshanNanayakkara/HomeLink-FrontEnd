@@ -1,0 +1,162 @@
+@import "./variables.scss";
+@import "./breakpoints.scss";
+
+.login {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-size: cover;
+  background: #f5f5fb;
+  
+  &_container {
+    display: flex;
+    width: 70%;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease;
+    overflow: hidden;
+    
+    &:hover {
+      box-shadow: 0 8px 16px rgba(158, 158, 158, 0.3);
+    }
+    
+    @include lg {
+      width: 80%;
+    }
+    
+    @include mm {
+      width: 90%;
+      flex-direction: column;
+    }
+  }
+  
+  &_image {
+    width: 50%;
+    background: url('../styles//assests/homelink.png') center center no-repeat; 
+    background-color: #f5fbf9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    
+    @include mm {
+      width: 100%;
+      height: 200px;
+    }
+    
+    // Add decorative elements to make it more attractive
+    &:before {
+      content: "";
+      position: absolute;
+      width: 150%;
+      height: 150%;
+      background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 70%);
+      top: -25%;
+      left: -25%;
+    }
+    
+    &:after {
+      content: "";
+      position: absolute;
+      width: 60%;
+      height: 60%;
+      border-radius: 50%;
+      background: linear-gradient(45deg, rgba(255,255,255,0.2), rgba(255,255,255,0));
+      bottom: -20%;
+      right: -20%;
+    }
+    
+    // You can add your logo or icon here
+    &_logo {
+      position: relative;
+      z-index: 2;
+      font-size: 3rem;
+      color: white;
+    }
+  }
+  
+  &_content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 50%;
+    padding: 40px;
+    background-color: #fff;
+    color: #000;
+    
+    @include lg {
+      padding: 30px;
+    }
+    
+    @include mm {
+      width: 100%;
+      padding: 25px;
+    }
+    
+    &_form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+      
+      input {
+        width: 100%;
+        padding: 7px 15px;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+        outline: none;
+        text-align: center;
+        color: rgb(0, 0, 0);
+        
+        input:not(:placeholder-shown):focus {
+          background: transparent;
+        }
+        
+        &::placeholder {
+          color: rgb(0, 0, 0);
+        }
+      }
+      
+      button {
+        background-color: aquamarine;
+        padding: 5px;
+        margin-top: 15px;
+        width: 50%;
+        
+        &:hover {
+          box-shadow: 0 0 10px 3px rgb(0, 0, 0);
+        }
+      }
+    }
+    
+    &_google {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    
+    a {
+      text-decoration: none;
+      color: rgb(0, 0, 0);
+      font-size: 17px;
+      font-weight: 600;
+      text-align: center;
+      
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    
+    p {
+      color: rgb(0, 0, 0);
+      font-size: 13px;
+      text-align: center;
+    }
+  }
+}
