@@ -1,70 +1,150 @@
-# Getting Started with Create React App
+# HomeLink - Home Rental Platform
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+HomeLink is a comprehensive home rental platform built with the MERN stack (MongoDB, Express, React, Node.js) and Redux for state management. The platform offers a seamless experience for both property owners and renters, allowing users to browse, search, and manage rental properties efficiently.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Features
 
-### `npm start`
+### Frontend
+- Browse available rental properties
+- Advanced search by location, price, and property type
+- View detailed property information and images
+- User authentication and profile management
+- Responsive design for both mobile and desktop
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Backend
+- User registration and authentication using JWT
+- CRUD operations for property listings
+- Booking and rental management
+- Secure API endpoints for frontend integration
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🛠️ Tech Stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Frontend
+- **React.js**
+- **Redux Toolkit** for state management
+- **Axios** for API communication
+- **React Router** for navigation
+- **Bootstrap** for UI styling
 
-### `npm run build`
+### Backend
+- **Node.js** with **Express.js**
+- **MongoDB** with **Mongoose** for database management
+- **JWT** for authentication
+- **Cloudinary** for image uploads (optional)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## ⚙️ Installation & Setup
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Prerequisites
+- Node.js & npm installed
+- MongoDB setup
+- Git installed
 
-### `npm run eject`
+### 1. Clone the Repositories
+```sh
+# Frontend
+git clone https://github.com/DeshanNanayakkara/HomeLink-FrontEnd.git
+cd HomeLink-FrontEnd
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# Backend
+git clone https://github.com/DeshanNanayakkara/HomeLink-BackEnd.git
+cd HomeLink-BackEnd
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 2. Install Dependencies
+```sh
+# Frontend
+npm install
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+# Backend
+npm install
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### 3. Configure Environment Variables
 
-## Learn More
+#### Frontend (`.env`)
+```env
+REACT_APP_API_URL=http://localhost:5000
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### Backend (`.env`)
+```env
+MONGO_URI=your_mongodb_uri
+JWT_SECRET=your_jwt_secret
+CLOUDINARY_CLOUD_NAME=your_cloud_name
+CLOUDINARY_API_KEY=your_api_key
+CLOUDINARY_API_SECRET=your_api_secret
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 4. Run the Application
+```sh
+# Frontend
+npm start
 
-### Code Splitting
+# Backend
+npm run dev
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## 📄 API Endpoints
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Authentication
+- `POST /api/auth/register` - Register a new user
+- `POST /api/auth/login` - Login a user
 
-### Making a Progressive Web App
+### Properties
+- `GET /api/properties` - Get all properties
+- `POST /api/properties` - Create a new property (Admin only)
+- `PUT /api/properties/:id` - Update a property (Admin only)
+- `DELETE /api/properties/:id` - Delete a property (Admin only)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+## 📂 Folder Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```
+HomeLink
+├── frontend
+│   ├── public
+│   ├── src
+│   │   ├── components
+│   │   ├── pages
+│   │   ├── redux
+│   │   └── App.js
+│   └── package.json
+└── backend
+    ├── controllers
+    ├── models
+    ├── routes
+    ├── middleware
+    ├── server.js
+    └── package.json
+```
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 💡 Contributing
+1. Fork the project
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a pull request
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 📝 License
+This project is licensed under the MIT License.
+
+---
+
+## 👨‍💻 Author
+**Deshan Nanayakkara**  
+Passionate Software Engineering Student | MERN Stack Developer
+
+Feel free to contribute or reach out if you have any questions!
